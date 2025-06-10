@@ -47,11 +47,12 @@ public class CheckGuest {
         } */
 
             boolean isNameFound = false;
-
+                                //uso !isNameFound && ... al posto di break;
             for (int index = 0; !isNameFound && index < arrayInvitati.length; index++){
+                                    //.toLoweCase().trim() per trasformare la string in lowerCase e trimmare gli spazzi
                 if(arrayInvitati[index].toLowerCase().trim().equals(nomeUtente.toLowerCase().trim())){
                     isNameFound = true;
-                    //break;
+                    //break; //con break esco dal ciclo e smetto di iterare una volta trovato il nome
                 }
                // System.out.println(arrayInvitati[index]);
             }
